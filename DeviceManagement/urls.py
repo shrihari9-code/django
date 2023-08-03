@@ -1,4 +1,3 @@
-# DeviceManagement/urls.py
 from django.contrib import admin
 from django.urls import path, include
 from devices.views import device_list  # Import the device_list view

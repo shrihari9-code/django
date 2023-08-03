@@ -1,4 +1,3 @@
-# devices/api.py
 from rest_framework import serializers, viewsets
 from .models import Device
 from rest_framework.views import APIView
