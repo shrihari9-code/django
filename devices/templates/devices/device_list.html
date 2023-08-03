@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        strong {
+            font-weight: bold;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Device List</h1>
+    <ul>
+        {% for device in devices %}
+            <li>
+                <strong>Name:</strong> {{ device.name }}<br>
+                <strong>Description:</strong> {{ device.description }}<br>
+                <strong>Created Date:</strong> {{ device.created_date }}<br>
+                <strong>Modified Date:</strong> {{ device.modified_date }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="{% url 'add_device' %}">Add Device</a>
+</body>
+</html>
